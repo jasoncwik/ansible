@@ -26,6 +26,24 @@ options:
         description:
             - Name of namespace to contain the user. 
         required: true
+    username:
+        description:
+            - Name of the management user to use when connecting to the ECS management API.
+        required: true
+    password:
+        description:
+            - Password for the management user.
+        required: true
+    endpoint:
+        description:
+            - URL of the ECS management API.  Typically, 'https://server:4443'.
+        required: true
+    validate_certs:
+        description:
+            - If set to false, do not validate the certificate presented by the management endpoint.  Typically used when ECS is using a self-signed certificate.  Not recommended.
+        required: false
+        default: True
+        
 
 requirements:
   - ecsclient >= 1.1.8
